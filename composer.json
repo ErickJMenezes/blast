@@ -1,0 +1,32 @@
+{
+    "name": "erickjmenezes/blast",
+    "description": "MIT",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Blast\\": "src/"
+        },
+        "files": ["lib/parser.php"]
+    },
+    "authors": [
+        {
+            "name": "ErickJMenezes",
+            "email": "erickmenezes.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-mbstring": "*",
+        "mrsuh/tree-printer": "^1.0",
+        "doctrine/lexer": "^3.0",
+        "symfony/console": "^6.3"
+    },
+    "require-dev": {
+        "mrsuh/php-bison-skeleton": "^1.2"
+    },
+    "minimum-stability": "stable",
+    "scripts": {
+        "build": "/opt/homebrew/Cellar/bison/3.8.2/bin/bison --skeleton=vendor/mrsuh/php-bison-skeleton/src/php-skel.m4 -o lib/parser.php grammar.y"
+    }
+}

@@ -1,0 +1,44 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use Blast\Console\BlastCommand;
+use Symfony\Component\Console\Application;
+
+$code = <<<BLAST
+import "std.console";
+import "/Users/erickmenezes/PhpstormProjects/Lang/bin/User.lang";
+
+var user = new User("xpto abc");
+
+user.print();
+
+var test = fun (callback) {
+    return callback(1000);
+};
+exit test(fun (val) {
+    return val;
+});
+        
+type Test {
+    var value;
+    
+    fun Test(value) {
+        this.value = value;
+    }
+}
+
+var obj1 = new Test(100);
+var obj2 = new Test(200);
+
+exit obj1.value + obj2.value;
+BLAST;
+
+$console = new Application('Blast Interpreter');
+
+$console->add(new BlastCommand());
+
+$console->setDefaultCommand('blast', true);
+
+exit($console->run());
