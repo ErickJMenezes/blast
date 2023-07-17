@@ -33,24 +33,6 @@ class Lexer implements LexerInterface
     ];
 
     /**
-     * @var array<int>
-     */
-    private const SINGLE_CHAR_TOKENS = [
-        self::T_PLUS,
-        self::T_MINUS,
-        self::T_TIMES,
-        self::T_DIV,
-        self::T_SEMICOLON,
-        self::T_OPEN_PARENTHESIS,
-        self::T_CLOSE_PARENTHESIS,
-        self::T_COMMA,
-        self::T_OPEN_BRACES,
-        self::T_CLOSE_BRACES,
-        self::T_EQ,
-        self::T_DOT,
-    ];
-
-    /**
      * @var array<string>
      */
     private readonly array $chars;
@@ -125,15 +107,9 @@ class Lexer implements LexerInterface
             return $this->getNextToken();
         }
 
-        if (($token = $this->isSingleCharToken($this->currentChar)) !== false) {
-            $this->value = $this->currentChar;
-            $this->next();
-            return $token;
-        }
-
         if ($this->currentCharIs(self::T_GT)) {
             $this->next();
-            if ($this->currentCharIs(self::T_EQ)) {
+            if ($this->currentChar === '=') {
                 $this->value = '>=';
                 return self::T_GTE;
             } else {
@@ -144,7 +120,7 @@ class Lexer implements LexerInterface
 
         if ($this->currentCharIs(self::T_LT)) {
             $this->next();
-            if ($this->currentCharIs(self::T_EQ)) {
+            if ($this->currentChar === '=') {
                 $this->value = '<=';
                 return self::T_LTE;
             } else {
@@ -159,7 +135,7 @@ class Lexer implements LexerInterface
             while (!$this->eof()) {
                 if ($this->currentCharIs(self::T_NUMBER)) {
                     $value .= $this->currentChar;
-                } elseif ($this->currentCharIs(self::T_DOT)) {
+                } elseif ($this->currentChar === '.') {
                     $value .= $this->currentChar;
                 } else {
                     break;
@@ -213,7 +189,9 @@ class Lexer implements LexerInterface
             return self::YYEOF;
         }
 
-        throw new Exception("Unknown token \"$this->currentChar\" at line {$this->charLine()}");
+        $ord = ord($this->currentChar);
+        $this->next();
+        return $ord;
     }
 
     private function charLine(): string
@@ -247,11 +225,6 @@ class Lexer implements LexerInterface
         return $this->isAnyOfTokens(self::RESERVED_STRINGS, $string);
     }
 
-    private function isSingleCharToken(?string $string): int|false
-    {
-        return $this->isAnyOfTokens(self::SINGLE_CHAR_TOKENS, $string);
-    }
-
     private function isAnyOfTokens(array $tokens, ?string $string): int|false
     {
         if (is_null($string)) {
@@ -269,31 +242,20 @@ class Lexer implements LexerInterface
     {
         return match($token) {
             self::T_STRING => '/^[a-zA-Z\_]*[a-zA-Z\_0-9]*$/',
-            self::T_EQ => '/\=/',
             self::T_IDENTICAL => '/^is$/',
             self::T_NUMBER => '/^(?:\d|\d+\.\d+)$/',
-            self::T_SEMICOLON => '/\;/',
             self::T_WHITESPACE => '/\s|\t/',
             self::T_EOL => '/\n|\r/',
             self::T_VAR => '/^var$/',
             self::T_EXIT => '/^exit$/',
-            self::T_PLUS => '/\+/',
-            self::T_MINUS => '/\-/',
-            self::T_TIMES => '/\*/',
-            self::T_DIV => '/\//',
             self::T_AND => '/^and$/',
             self::T_OR => '/^or$/',
             self::T_NOT => '/^not$/',
             self::T_TRUE => '/^true$/',
             self::T_FALSE => '/^false$/',
-            self::T_OPEN_PARENTHESIS => '/\(/',
-            self::T_CLOSE_PARENTHESIS => '/\)/',
             self::T_USER_STRING => '/\"(/w*)\"/',
             self::T_BACKSLASH => '/\\\\/',
             self::T_DOUBLE_QUOTE => '/\"/',
-            self::T_COMMA => '/\,/',
-            self::T_OPEN_BRACES => '/\{/',
-            self::T_CLOSE_BRACES => '/\}/',
             self::T_FUN => '/^fun$/',
             self::T_RETURN => '/^return$/',
             self::T_IMPORT => '/^import$/',
@@ -307,7 +269,6 @@ class Lexer implements LexerInterface
             self::T_GTE => '/^>=$/',
             self::T_LTE => '/^<=$/',
             self::T_FOR => '/^for$/',
-            self::T_DOT => '/^\.$/',
             self::T_TYPE => '/^type$/',
             self::T_NEW => '/^new$/',
             default => throw new Exception("Unknown token {$token}")

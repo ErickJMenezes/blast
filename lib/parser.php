@@ -71,88 +71,64 @@ interface LexerInterface {
     public const YYUNDEF = 257;
     /** Token T_STRING, to be returned by the scanner.  */
     public const T_STRING = 258;
-    /** Token T_EQ, to be returned by the scanner.  */
-    public const T_EQ = 259;
     /** Token T_IDENTICAL, to be returned by the scanner.  */
-    public const T_IDENTICAL = 260;
+    public const T_IDENTICAL = 259;
     /** Token T_NUMBER, to be returned by the scanner.  */
-    public const T_NUMBER = 261;
-    /** Token T_SEMICOLON, to be returned by the scanner.  */
-    public const T_SEMICOLON = 262;
+    public const T_NUMBER = 260;
     /** Token T_WHITESPACE, to be returned by the scanner.  */
-    public const T_WHITESPACE = 263;
+    public const T_WHITESPACE = 261;
     /** Token T_VAR, to be returned by the scanner.  */
-    public const T_VAR = 264;
+    public const T_VAR = 262;
     /** Token T_EXIT, to be returned by the scanner.  */
-    public const T_EXIT = 265;
-    /** Token T_PLUS, to be returned by the scanner.  */
-    public const T_PLUS = 266;
-    /** Token T_MINUS, to be returned by the scanner.  */
-    public const T_MINUS = 267;
-    /** Token T_TIMES, to be returned by the scanner.  */
-    public const T_TIMES = 268;
-    /** Token T_DIV, to be returned by the scanner.  */
-    public const T_DIV = 269;
+    public const T_EXIT = 263;
     /** Token T_AND, to be returned by the scanner.  */
-    public const T_AND = 270;
+    public const T_AND = 264;
     /** Token T_OR, to be returned by the scanner.  */
-    public const T_OR = 271;
+    public const T_OR = 265;
     /** Token T_NOT, to be returned by the scanner.  */
-    public const T_NOT = 272;
+    public const T_NOT = 266;
     /** Token T_TRUE, to be returned by the scanner.  */
-    public const T_TRUE = 273;
+    public const T_TRUE = 267;
     /** Token T_FALSE, to be returned by the scanner.  */
-    public const T_FALSE = 274;
-    /** Token T_OPEN_PARENTHESIS, to be returned by the scanner.  */
-    public const T_OPEN_PARENTHESIS = 275;
-    /** Token T_CLOSE_PARENTHESIS, to be returned by the scanner.  */
-    public const T_CLOSE_PARENTHESIS = 276;
+    public const T_FALSE = 268;
     /** Token T_USER_STRING, to be returned by the scanner.  */
-    public const T_USER_STRING = 277;
+    public const T_USER_STRING = 269;
     /** Token T_BACKSLASH, to be returned by the scanner.  */
-    public const T_BACKSLASH = 278;
+    public const T_BACKSLASH = 270;
     /** Token T_DOUBLE_QUOTE, to be returned by the scanner.  */
-    public const T_DOUBLE_QUOTE = 279;
-    /** Token T_COMMA, to be returned by the scanner.  */
-    public const T_COMMA = 280;
-    /** Token T_OPEN_BRACES, to be returned by the scanner.  */
-    public const T_OPEN_BRACES = 281;
-    /** Token T_CLOSE_BRACES, to be returned by the scanner.  */
-    public const T_CLOSE_BRACES = 282;
+    public const T_DOUBLE_QUOTE = 271;
     /** Token T_FUN, to be returned by the scanner.  */
-    public const T_FUN = 283;
+    public const T_FUN = 272;
     /** Token T_RETURN, to be returned by the scanner.  */
-    public const T_RETURN = 284;
+    public const T_RETURN = 273;
     /** Token T_IMPORT, to be returned by the scanner.  */
-    public const T_IMPORT = 285;
+    public const T_IMPORT = 274;
     /** Token T_IF, to be returned by the scanner.  */
-    public const T_IF = 286;
+    public const T_IF = 275;
     /** Token T_ELIF, to be returned by the scanner.  */
-    public const T_ELIF = 287;
+    public const T_ELIF = 276;
     /** Token T_ELSE, to be returned by the scanner.  */
-    public const T_ELSE = 288;
+    public const T_ELSE = 277;
     /** Token T_WHILE, to be returned by the scanner.  */
-    public const T_WHILE = 289;
+    public const T_WHILE = 278;
     /** Token T_BREAK, to be returned by the scanner.  */
-    public const T_BREAK = 290;
+    public const T_BREAK = 279;
     /** Token T_GT, to be returned by the scanner.  */
-    public const T_GT = 291;
+    public const T_GT = 280;
     /** Token T_LT, to be returned by the scanner.  */
-    public const T_LT = 292;
+    public const T_LT = 281;
     /** Token T_GTE, to be returned by the scanner.  */
-    public const T_GTE = 293;
+    public const T_GTE = 282;
     /** Token T_LTE, to be returned by the scanner.  */
-    public const T_LTE = 294;
+    public const T_LTE = 283;
     /** Token T_FOR, to be returned by the scanner.  */
-    public const T_FOR = 295;
-    /** Token T_DOT, to be returned by the scanner.  */
-    public const T_DOT = 296;
+    public const T_FOR = 284;
     /** Token T_TYPE, to be returned by the scanner.  */
-    public const T_TYPE = 297;
+    public const T_TYPE = 285;
     /** Token T_NEW, to be returned by the scanner.  */
-    public const T_NEW = 298;
+    public const T_NEW = 286;
     /** Token T_EOL, to be returned by the scanner.  */
-    public const T_EOL = 299;
+    public const T_EOL = 287;
 
 
 
@@ -296,47 +272,47 @@ interface LexerInterface {
     public const S_YYerror = 1;    /* error  */
     public const S_YYUNDEF = 2;    /* "invalid token"  */
     public const S_T_STRING = 3;   /* T_STRING  */
-    public const S_T_EQ = 4;       /* T_EQ  */
-    public const S_T_IDENTICAL = 5; /* T_IDENTICAL  */
-    public const S_T_NUMBER = 6;   /* T_NUMBER  */
-    public const S_T_SEMICOLON = 7; /* T_SEMICOLON  */
-    public const S_T_WHITESPACE = 8; /* T_WHITESPACE  */
-    public const S_T_VAR = 9;      /* T_VAR  */
-    public const S_T_EXIT = 10;    /* T_EXIT  */
-    public const S_T_PLUS = 11;    /* T_PLUS  */
-    public const S_T_MINUS = 12;   /* T_MINUS  */
-    public const S_T_TIMES = 13;   /* T_TIMES  */
-    public const S_T_DIV = 14;     /* T_DIV  */
-    public const S_T_AND = 15;     /* T_AND  */
-    public const S_T_OR = 16;      /* T_OR  */
-    public const S_T_NOT = 17;     /* T_NOT  */
-    public const S_T_TRUE = 18;    /* T_TRUE  */
-    public const S_T_FALSE = 19;   /* T_FALSE  */
-    public const S_T_OPEN_PARENTHESIS = 20; /* T_OPEN_PARENTHESIS  */
-    public const S_T_CLOSE_PARENTHESIS = 21; /* T_CLOSE_PARENTHESIS  */
-    public const S_T_USER_STRING = 22; /* T_USER_STRING  */
-    public const S_T_BACKSLASH = 23; /* T_BACKSLASH  */
-    public const S_T_DOUBLE_QUOTE = 24; /* T_DOUBLE_QUOTE  */
-    public const S_T_COMMA = 25;   /* T_COMMA  */
-    public const S_T_OPEN_BRACES = 26; /* T_OPEN_BRACES  */
-    public const S_T_CLOSE_BRACES = 27; /* T_CLOSE_BRACES  */
-    public const S_T_FUN = 28;     /* T_FUN  */
-    public const S_T_RETURN = 29;  /* T_RETURN  */
-    public const S_T_IMPORT = 30;  /* T_IMPORT  */
-    public const S_T_IF = 31;      /* T_IF  */
-    public const S_T_ELIF = 32;    /* T_ELIF  */
-    public const S_T_ELSE = 33;    /* T_ELSE  */
-    public const S_T_WHILE = 34;   /* T_WHILE  */
-    public const S_T_BREAK = 35;   /* T_BREAK  */
-    public const S_T_GT = 36;      /* T_GT  */
-    public const S_T_LT = 37;      /* T_LT  */
-    public const S_T_GTE = 38;     /* T_GTE  */
-    public const S_T_LTE = 39;     /* T_LTE  */
-    public const S_T_FOR = 40;     /* T_FOR  */
-    public const S_T_DOT = 41;     /* T_DOT  */
-    public const S_T_TYPE = 42;    /* T_TYPE  */
-    public const S_T_NEW = 43;     /* T_NEW  */
-    public const S_T_EOL = 44;     /* T_EOL  */
+    public const S_T_IDENTICAL = 4; /* T_IDENTICAL  */
+    public const S_T_NUMBER = 5;   /* T_NUMBER  */
+    public const S_T_WHITESPACE = 6; /* T_WHITESPACE  */
+    public const S_T_VAR = 7;      /* T_VAR  */
+    public const S_T_EXIT = 8;     /* T_EXIT  */
+    public const S_T_AND = 9;      /* T_AND  */
+    public const S_T_OR = 10;      /* T_OR  */
+    public const S_T_NOT = 11;     /* T_NOT  */
+    public const S_T_TRUE = 12;    /* T_TRUE  */
+    public const S_T_FALSE = 13;   /* T_FALSE  */
+    public const S_T_USER_STRING = 14; /* T_USER_STRING  */
+    public const S_T_BACKSLASH = 15; /* T_BACKSLASH  */
+    public const S_T_DOUBLE_QUOTE = 16; /* T_DOUBLE_QUOTE  */
+    public const S_T_FUN = 17;     /* T_FUN  */
+    public const S_T_RETURN = 18;  /* T_RETURN  */
+    public const S_T_IMPORT = 19;  /* T_IMPORT  */
+    public const S_T_IF = 20;      /* T_IF  */
+    public const S_T_ELIF = 21;    /* T_ELIF  */
+    public const S_T_ELSE = 22;    /* T_ELSE  */
+    public const S_T_WHILE = 23;   /* T_WHILE  */
+    public const S_T_BREAK = 24;   /* T_BREAK  */
+    public const S_T_GT = 25;      /* T_GT  */
+    public const S_T_LT = 26;      /* T_LT  */
+    public const S_T_GTE = 27;     /* T_GTE  */
+    public const S_T_LTE = 28;     /* T_LTE  */
+    public const S_T_FOR = 29;     /* T_FOR  */
+    public const S_T_TYPE = 30;    /* T_TYPE  */
+    public const S_T_NEW = 31;     /* T_NEW  */
+    public const S_T_EOL = 32;     /* T_EOL  */
+    public const S_33_ = 33;       /* '='  */
+    public const S_34_ = 34;       /* '+'  */
+    public const S_35_ = 35;       /* '-'  */
+    public const S_36_ = 36;       /* '*'  */
+    public const S_37_ = 37;       /* '/'  */
+    public const S_38_ = 38;       /* '.'  */
+    public const S_39_ = 39;       /* ';'  */
+    public const S_40_ = 40;       /* '('  */
+    public const S_41_ = 41;       /* ')'  */
+    public const S_42_ = 42;       /* ','  */
+    public const S_43_ = 43;       /* '{'  */
+    public const S_44_ = 44;       /* '}'  */
     public const S_YYACCEPT = 45;  /* $accept  */
     public const S_start = 46;     /* start  */
     public const S_statement = 47; /* statement  */
@@ -384,21 +360,20 @@ interface LexerInterface {
     }
 
 
-    private const NAMES = array("\"end of file\"", "error", "\"invalid token\"", "T_STRING", "T_EQ",
-  "T_IDENTICAL", "T_NUMBER", "T_SEMICOLON", "T_WHITESPACE", "T_VAR",
-  "T_EXIT", "T_PLUS", "T_MINUS", "T_TIMES", "T_DIV", "T_AND", "T_OR",
-  "T_NOT", "T_TRUE", "T_FALSE", "T_OPEN_PARENTHESIS",
-  "T_CLOSE_PARENTHESIS", "T_USER_STRING", "T_BACKSLASH", "T_DOUBLE_QUOTE",
-  "T_COMMA", "T_OPEN_BRACES", "T_CLOSE_BRACES", "T_FUN", "T_RETURN",
-  "T_IMPORT", "T_IF", "T_ELIF", "T_ELSE", "T_WHILE", "T_BREAK", "T_GT",
-  "T_LT", "T_GTE", "T_LTE", "T_FOR", "T_DOT", "T_TYPE", "T_NEW", "T_EOL",
-  "\$accept", "start", "statement", "statement_list", "expression",
-  "expression_node", "math_expression", "boolean_expression", "variable",
-  "property_fetch", "function_call_args", "function_call",
-  "variable_declaration", "assignment_expression", "exit", "fun_param",
-  "fun_param_list", "fun_declaration", "fun_expression", "return",
-  "base_if_statement", "else_if_statement", "multi_else_if_statement",
-  "else_statement", "if_statement", "for_init_expression", "for_condition",
+    private const NAMES = array("\"end of file\"", "error", "\"invalid token\"", "T_STRING",
+  "T_IDENTICAL", "T_NUMBER", "T_WHITESPACE", "T_VAR", "T_EXIT", "T_AND",
+  "T_OR", "T_NOT", "T_TRUE", "T_FALSE", "T_USER_STRING", "T_BACKSLASH",
+  "T_DOUBLE_QUOTE", "T_FUN", "T_RETURN", "T_IMPORT", "T_IF", "T_ELIF",
+  "T_ELSE", "T_WHILE", "T_BREAK", "T_GT", "T_LT", "T_GTE", "T_LTE",
+  "T_FOR", "T_TYPE", "T_NEW", "T_EOL", "'='", "'+'", "'-'", "'*'", "'/'",
+  "'.'", "';'", "'('", "')'", "','", "'{'", "'}'", "\$accept", "start",
+  "statement", "statement_list", "expression", "expression_node",
+  "math_expression", "boolean_expression", "variable", "property_fetch",
+  "function_call_args", "function_call", "variable_declaration",
+  "assignment_expression", "exit", "fun_param", "fun_param_list",
+  "fun_declaration", "fun_expression", "return", "base_if_statement",
+  "else_if_statement", "multi_else_if_statement", "else_statement",
+  "if_statement", "for_init_expression", "for_condition",
   "for_update_expression", "for_statement", "while_statement", "import",
   "type_body", "type_declaration", "new_object", null);
 
@@ -426,7 +401,7 @@ class Parser
     public function setAst(Node $ast): void { $this->ast = $ast; }
     public function getAst(): Node { return $this->ast; }
 
-/* "lib/parser.php":430  */
+/* "lib/parser.php":405  */
 
 
 
@@ -569,553 +544,553 @@ class Parser
     switch ($yyn)
       {
           case 2: /* start: statement_list  */
-    /* "grammar.y":70  */
-                                        { self::setAst(new Statement\StatementList($yystack->valueAt(0))); };
+    /* "grammar.y":58  */
+                                                                                        { self::setAst(new Statement\StatementList($yystack->valueAt(0))); };
   break;
 
 
   case 3: /* statement: variable_declaration  */
-    /* "grammar.y":74  */
-                            { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":62  */
+                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 4: /* statement: exit  */
-    /* "grammar.y":75  */
-                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":63  */
+                                                                                                { $yyval = $yystack->valueAt(0); };
   break;
 
 
-  case 5: /* statement: expression T_SEMICOLON  */
-    /* "grammar.y":76  */
-                                { $yyval = $yystack->valueAt(1); };
+  case 5: /* statement: expression ';'  */
+    /* "grammar.y":64  */
+                                                                                        { $yyval = $yystack->valueAt(1); };
   break;
 
 
   case 6: /* statement: fun_declaration  */
-    /* "grammar.y":77  */
-                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":65  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 7: /* statement: return  */
-    /* "grammar.y":78  */
-                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":66  */
+                                                                                                { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 8: /* statement: if_statement  */
-    /* "grammar.y":79  */
-                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":67  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 9: /* statement: for_statement  */
-    /* "grammar.y":80  */
-                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":68  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 10: /* statement: while_statement  */
-    /* "grammar.y":81  */
-                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":69  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 11: /* statement: import  */
-    /* "grammar.y":82  */
-                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":70  */
+                                                                                                { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 12: /* statement: type_declaration  */
-    /* "grammar.y":83  */
-                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":71  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 13: /* statement_list: %empty  */
-    /* "grammar.y":86  */
-                                                  { $yyval = []; };
+    /* "grammar.y":74  */
+                                                                                        { $yyval = []; };
   break;
 
 
   case 14: /* statement_list: statement_list statement  */
-    /* "grammar.y":87  */
-                                          { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)];  };
+    /* "grammar.y":75  */
+                                                                                { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)];  };
   break;
 
 
   case 15: /* expression: T_NUMBER  */
-    /* "grammar.y":91  */
-                                                                                                        { $yyval = new Expression\NumberNode($yystack->valueAt(0)); };
+    /* "grammar.y":79  */
+                                                                                { $yyval = new Expression\NumberNode($yystack->valueAt(0)); };
   break;
 
 
   case 16: /* expression: T_USER_STRING  */
-    /* "grammar.y":92  */
-                                                                                                        { $yyval = new Expression\StringNode($yystack->valueAt(0)); };
+    /* "grammar.y":80  */
+                                                                                { $yyval = new Expression\StringNode($yystack->valueAt(0)); };
   break;
 
 
   case 17: /* expression: T_TRUE  */
-    /* "grammar.y":93  */
-                                                                                                        { $yyval = new Expression\BooleanNode($yystack->valueAt(0)); };
+    /* "grammar.y":81  */
+                                                                                { $yyval = new Expression\BooleanNode($yystack->valueAt(0)); };
   break;
 
 
   case 18: /* expression: T_FALSE  */
-    /* "grammar.y":94  */
-                                                                                                        { $yyval = new Expression\BooleanNode($yystack->valueAt(0)); };
+    /* "grammar.y":82  */
+                                                                                { $yyval = new Expression\BooleanNode($yystack->valueAt(0)); };
   break;
 
 
   case 19: /* expression: math_expression  */
-    /* "grammar.y":95  */
-                                                                                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":83  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 20: /* expression: boolean_expression  */
-    /* "grammar.y":96  */
-                                                                                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":84  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 21: /* expression: variable  */
-    /* "grammar.y":97  */
-                                                                                                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":85  */
+                                                                                                { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 22: /* expression: property_fetch  */
-    /* "grammar.y":98  */
-                                                                                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":86  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 23: /* expression: fun_expression  */
-    /* "grammar.y":99  */
-                                                                                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":87  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 24: /* expression: function_call  */
-    /* "grammar.y":100  */
-                                                                                                                { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":88  */
+                                                                                        { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 25: /* expression: new_object  */
-    /* "grammar.y":101  */
-                                                                                                                        { $yyval = $yystack->valueAt(0); };
+    /* "grammar.y":89  */
+                                                                                                { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 26: /* expression: assignment_expression  */
+    /* "grammar.y":90  */
+                                                                                { $yyval = $yystack->valueAt(0); };
+  break;
+
+
+  case 28: /* expression_node: '(' expression ')'  */
+    /* "grammar.y":96  */
+                                                                                        { $yyval = new Expression\ExpressionNode([$yystack->valueAt(1)]); };
+  break;
+
+
+  case 29: /* math_expression: expression '+' expression  */
+    /* "grammar.y":100  */
+                                                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+  break;
+
+
+  case 30: /* math_expression: expression '-' expression  */
+    /* "grammar.y":101  */
+                                                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+  break;
+
+
+  case 31: /* math_expression: expression '*' expression  */
     /* "grammar.y":102  */
-                                                                                                        { $yyval = $yystack->valueAt(0); };
+                                                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
-  case 28: /* expression_node: T_OPEN_PARENTHESIS expression T_CLOSE_PARENTHESIS  */
+  case 32: /* math_expression: expression '/' expression  */
+    /* "grammar.y":103  */
+                                                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+  break;
+
+
+  case 33: /* math_expression: expression '+' '+'  */
+    /* "grammar.y":105  */
+                                                                                        { $yyval = new Expression\PostIncrement([$yystack->valueAt(2)]); };
+  break;
+
+
+  case 34: /* math_expression: '+' '+' expression  */
+    /* "grammar.y":106  */
+                                                                                        { $yyval = new Expression\PreIncrement([$yystack->valueAt(0)]); };
+  break;
+
+
+  case 35: /* math_expression: expression '-' '-'  */
     /* "grammar.y":108  */
-                                                                                { $yyval = new Expression\ExpressionNode([$yystack->valueAt(1)]); };
+                                                                                        { $yyval = new Expression\PostDecrement([$yystack->valueAt(2)]); };
   break;
 
 
-  case 29: /* math_expression: expression T_PLUS expression  */
+  case 36: /* math_expression: '-' '-' expression  */
+    /* "grammar.y":109  */
+                                                                                        { $yyval = new Expression\PreDecrement([$yystack->valueAt(0)]); };
+  break;
+
+
+  case 37: /* math_expression: expression '*' '*'  */
+    /* "grammar.y":111  */
+                                                                                        { $yyval = new Expression\PostPower([$yystack->valueAt(2)]); };
+  break;
+
+
+  case 38: /* math_expression: '*' '*' expression  */
     /* "grammar.y":112  */
-                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
-  break;
-
-
-  case 30: /* math_expression: expression T_MINUS expression  */
-    /* "grammar.y":113  */
-                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
-  break;
-
-
-  case 31: /* math_expression: expression T_TIMES expression  */
-    /* "grammar.y":114  */
-                                                { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
-  break;
-
-
-  case 32: /* math_expression: expression T_DIV expression  */
-    /* "grammar.y":115  */
-                                                        { $yyval = new Expression\MathExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
-  break;
-
-
-  case 33: /* math_expression: expression T_PLUS T_PLUS  */
-    /* "grammar.y":117  */
-                                                        { $yyval = new Expression\PostIncrement([$yystack->valueAt(2)]); };
-  break;
-
-
-  case 34: /* math_expression: T_PLUS T_PLUS expression  */
-    /* "grammar.y":118  */
-                                                        { $yyval = new Expression\PreIncrement([$yystack->valueAt(0)]); };
-  break;
-
-
-  case 35: /* math_expression: expression T_MINUS T_MINUS  */
-    /* "grammar.y":120  */
-                                                        { $yyval = new Expression\PostDecrement([$yystack->valueAt(2)]); };
-  break;
-
-
-  case 36: /* math_expression: T_MINUS T_MINUS expression  */
-    /* "grammar.y":121  */
-                                                        { $yyval = new Expression\PreDecrement([$yystack->valueAt(0)]); };
-  break;
-
-
-  case 37: /* math_expression: expression T_TIMES T_TIMES  */
-    /* "grammar.y":123  */
-                                                        { $yyval = new Expression\PostPower([$yystack->valueAt(2)]); };
-  break;
-
-
-  case 38: /* math_expression: T_TIMES T_TIMES expression  */
-    /* "grammar.y":124  */
-                                                        { $yyval = new Expression\PrePower([$yystack->valueAt(0)]); };
+                                                                                        { $yyval = new Expression\PrePower([$yystack->valueAt(0)]); };
   break;
 
 
   case 39: /* boolean_expression: expression T_GT expression  */
-    /* "grammar.y":128  */
-                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":116  */
+                                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 40: /* boolean_expression: expression T_GTE expression  */
-    /* "grammar.y":129  */
-                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":117  */
+                                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 41: /* boolean_expression: expression T_LT expression  */
-    /* "grammar.y":130  */
-                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":118  */
+                                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 42: /* boolean_expression: expression T_LTE expression  */
-    /* "grammar.y":131  */
-                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":119  */
+                                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 43: /* boolean_expression: expression T_IDENTICAL expression  */
-    /* "grammar.y":132  */
-                                                        { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":120  */
+                                                                        { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 44: /* boolean_expression: expression T_AND expression  */
-    /* "grammar.y":134  */
-                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":122  */
+                                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 45: /* boolean_expression: expression T_OR expression  */
-    /* "grammar.y":135  */
-                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
+    /* "grammar.y":123  */
+                                                                                { $yyval = new Expression\BooleanExpression($yystack->valueAt(1), [$yystack->valueAt(2), $yystack->valueAt(0)]); };
   break;
 
 
   case 46: /* boolean_expression: T_NOT expression  */
-    /* "grammar.y":137  */
-                                                                        { $yyval = new Expression\BooleanNegationExpression([$yystack->valueAt(0)]); };
+    /* "grammar.y":125  */
+                                                                                        { $yyval = new Expression\BooleanNegationExpression([$yystack->valueAt(0)]); };
   break;
 
 
   case 47: /* variable: T_STRING  */
-    /* "grammar.y":141  */
-                                                                { $yyval = new Expression\VariableFetch($yystack->valueAt(0)); };
+    /* "grammar.y":129  */
+                                                                                                { $yyval = new Expression\VariableFetch($yystack->valueAt(0)); };
   break;
 
 
-  case 48: /* property_fetch: expression T_DOT variable  */
-    /* "grammar.y":145  */
-                                                { $yyval = new Expression\PropertyFetch($yystack->valueAt(2), $yystack->valueAt(0)); };
+  case 48: /* property_fetch: expression '.' variable  */
+    /* "grammar.y":133  */
+                                                                                { $yyval = new Expression\PropertyFetch($yystack->valueAt(2), $yystack->valueAt(0)); };
   break;
 
 
   case 49: /* function_call_args: %empty  */
-    /* "grammar.y":148  */
+    /* "grammar.y":136  */
                                                                                         { $yyval = []; };
   break;
 
 
   case 50: /* function_call_args: expression  */
-    /* "grammar.y":149  */
+    /* "grammar.y":137  */
                                                                                                 { $yyval = [$yystack->valueAt(0)]; };
   break;
 
 
-  case 51: /* function_call_args: function_call_args T_COMMA expression  */
+  case 51: /* function_call_args: function_call_args ',' expression  */
+    /* "grammar.y":138  */
+                                                                        { $yyval = [...$yystack->valueAt(2), $yystack->valueAt(0)]; };
+  break;
+
+
+  case 52: /* function_call: variable '(' function_call_args ')'  */
+    /* "grammar.y":142  */
+                                                                        { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
+  break;
+
+
+  case 53: /* function_call: property_fetch '(' function_call_args ')'  */
+    /* "grammar.y":143  */
+                                                                { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
+  break;
+
+
+  case 54: /* function_call: expression_node '(' function_call_args ')'  */
+    /* "grammar.y":144  */
+                                                                { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
+  break;
+
+
+  case 55: /* function_call: function_call '(' function_call_args ')'  */
+    /* "grammar.y":145  */
+                                                                { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
+  break;
+
+
+  case 56: /* variable_declaration: T_VAR T_STRING ';'  */
+    /* "grammar.y":149  */
+                                                        { $yyval = new Statement\VariableDeclaration($yystack->valueAt(1)); };
+  break;
+
+
+  case 57: /* variable_declaration: T_VAR T_STRING '=' expression ';'  */
     /* "grammar.y":150  */
-                                                                { $yyval = [...$yystack->valueAt(2), $yystack->valueAt(0)]; };
+                                                                { $yyval = new Statement\VariableDeclaration($yystack->valueAt(3), $yystack->valueAt(1)); };
   break;
 
 
-  case 52: /* function_call: variable T_OPEN_PARENTHESIS function_call_args T_CLOSE_PARENTHESIS  */
+  case 58: /* assignment_expression: variable '=' expression  */
     /* "grammar.y":154  */
-                                                                                                        { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
-  break;
-
-
-  case 53: /* function_call: property_fetch T_OPEN_PARENTHESIS function_call_args T_CLOSE_PARENTHESIS  */
-    /* "grammar.y":155  */
-                                                                                                { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
-  break;
-
-
-  case 54: /* function_call: expression_node T_OPEN_PARENTHESIS function_call_args T_CLOSE_PARENTHESIS  */
-    /* "grammar.y":156  */
-                                                                                                { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
-  break;
-
-
-  case 55: /* function_call: function_call T_OPEN_PARENTHESIS function_call_args T_CLOSE_PARENTHESIS  */
-    /* "grammar.y":157  */
-                                                                                        { $yyval = new Expression\FunctionCall($yystack->valueAt(3), $yystack->valueAt(1)); };
-  break;
-
-
-  case 56: /* variable_declaration: T_VAR T_STRING T_SEMICOLON  */
-    /* "grammar.y":161  */
-                                                    { $yyval = new Statement\VariableDeclaration($yystack->valueAt(1)); };
-  break;
-
-
-  case 57: /* variable_declaration: T_VAR T_STRING T_EQ expression T_SEMICOLON  */
-    /* "grammar.y":162  */
-                                                    { $yyval = new Statement\VariableDeclaration($yystack->valueAt(3), $yystack->valueAt(1)); };
-  break;
-
-
-  case 58: /* assignment_expression: variable T_EQ expression  */
-    /* "grammar.y":166  */
-                                                                                        { $yyval = new Expression\AssignmentExpression($yystack->valueAt(2), $yystack->valueAt(0)); };
-  break;
-
-
-  case 59: /* assignment_expression: property_fetch T_EQ expression  */
-    /* "grammar.y":167  */
                                                                                 { $yyval = new Expression\AssignmentExpression($yystack->valueAt(2), $yystack->valueAt(0)); };
   break;
 
 
-  case 60: /* exit: T_EXIT T_SEMICOLON  */
-    /* "grammar.y":171  */
-                                                                                        { $yyval = new Statement\ExitStatement(); };
+  case 59: /* assignment_expression: property_fetch '=' expression  */
+    /* "grammar.y":155  */
+                                                                        { $yyval = new Expression\AssignmentExpression($yystack->valueAt(2), $yystack->valueAt(0)); };
   break;
 
 
-  case 61: /* exit: T_EXIT expression T_SEMICOLON  */
-    /* "grammar.y":172  */
-                                                                        { $yyval = new Statement\ExitStatement($yystack->valueAt(1)); };
+  case 60: /* exit: T_EXIT ';'  */
+    /* "grammar.y":159  */
+                                                                                                { $yyval = new Statement\ExitStatement(); };
+  break;
+
+
+  case 61: /* exit: T_EXIT expression ';'  */
+    /* "grammar.y":160  */
+                                                                                { $yyval = new Statement\ExitStatement($yystack->valueAt(1)); };
   break;
 
 
   case 62: /* fun_param: T_STRING  */
-    /* "grammar.y":176  */
-                                                        { $yyval = new Statement\VariableDeclaration($yystack->valueAt(0)); };
+    /* "grammar.y":164  */
+                                                                        { $yyval = new Statement\VariableDeclaration($yystack->valueAt(0)); };
   break;
 
 
-  case 63: /* fun_param: T_STRING T_COMMA  */
-    /* "grammar.y":177  */
-                                                { $yyval = new Statement\VariableDeclaration($yystack->valueAt(1)); };
+  case 63: /* fun_param: T_STRING ','  */
+    /* "grammar.y":165  */
+                                                                        { $yyval = new Statement\VariableDeclaration($yystack->valueAt(1)); };
   break;
 
 
-  case 64: /* fun_param: T_STRING T_EQ expression  */
-    /* "grammar.y":178  */
-                                                        { $yyval = new Statement\VariableDeclaration($yystack->valueAt(2), $yystack->valueAt(0)); };
+  case 64: /* fun_param: T_STRING '=' expression  */
+    /* "grammar.y":166  */
+                                                                        { $yyval = new Statement\VariableDeclaration($yystack->valueAt(2), $yystack->valueAt(0)); };
   break;
 
 
-  case 65: /* fun_param: T_STRING T_EQ expression T_COMMA  */
-    /* "grammar.y":179  */
-                                                { $yyval = new Statement\VariableDeclaration($yystack->valueAt(3), $yystack->valueAt(1)); };
+  case 65: /* fun_param: T_STRING '=' expression ','  */
+    /* "grammar.y":167  */
+                                                                { $yyval = new Statement\VariableDeclaration($yystack->valueAt(3), $yystack->valueAt(1)); };
   break;
 
 
   case 66: /* fun_param_list: %empty  */
-    /* "grammar.y":182  */
-                                                                { $yyval = []; };
+    /* "grammar.y":170  */
+                                                                                        { $yyval = []; };
   break;
 
 
   case 67: /* fun_param_list: fun_param_list fun_param  */
+    /* "grammar.y":171  */
+                                                                                { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)]; };
+  break;
+
+
+  case 68: /* fun_declaration: T_FUN T_STRING '(' fun_param_list ')' '{' statement_list '}'  */
+    /* "grammar.y":175  */
+                                                                        { $yyval = new Statement\FunctionDeclaration($yystack->valueAt(6), $yystack->valueAt(4), $yystack->valueAt(1)); };
+  break;
+
+
+  case 69: /* fun_expression: T_FUN '(' fun_param_list ')' '{' statement_list '}'  */
+    /* "grammar.y":179  */
+                                                                                        { $yyval = new Expression\FunctionExpression($yystack->valueAt(4), $yystack->valueAt(1)); };
+  break;
+
+
+  case 70: /* return: T_RETURN ';'  */
     /* "grammar.y":183  */
-                                                        { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)]; };
+                                                                                        { $yyval = new Statement\ReturnStatement(); };
   break;
 
 
-  case 68: /* fun_declaration: T_FUN T_STRING T_OPEN_PARENTHESIS fun_param_list T_CLOSE_PARENTHESIS T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":187  */
-                                                                                                                                { $yyval = new Statement\FunctionDeclaration($yystack->valueAt(6), $yystack->valueAt(4), $yystack->valueAt(1)); };
+  case 71: /* return: T_RETURN expression ';'  */
+    /* "grammar.y":184  */
+                                                                                { $yyval = new Statement\ReturnStatement($yystack->valueAt(1)); };
   break;
 
 
-  case 69: /* fun_expression: T_FUN T_OPEN_PARENTHESIS fun_param_list T_CLOSE_PARENTHESIS T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":191  */
-                                                                                                                { $yyval = new Expression\FunctionExpression($yystack->valueAt(4), $yystack->valueAt(1)); };
+  case 72: /* base_if_statement: T_IF '(' expression ')' '{' statement_list '}'  */
+    /* "grammar.y":188  */
+                                                        { $yyval = new Statement\IfStatement($yystack->valueAt(4), $yystack->valueAt(1)); };
   break;
 
 
-  case 70: /* return: T_RETURN T_SEMICOLON  */
-    /* "grammar.y":195  */
-                                                        { $yyval = new Statement\ReturnStatement(); };
-  break;
-
-
-  case 71: /* return: T_RETURN expression T_SEMICOLON  */
-    /* "grammar.y":196  */
-                                                { $yyval = new Statement\ReturnStatement($yystack->valueAt(1)); };
-  break;
-
-
-  case 72: /* base_if_statement: T_IF T_OPEN_PARENTHESIS expression T_CLOSE_PARENTHESIS T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":200  */
-                                                                                                                        { $yyval = new Statement\IfStatement($yystack->valueAt(4), $yystack->valueAt(1)); };
-  break;
-
-
-  case 73: /* else_if_statement: T_ELIF T_OPEN_PARENTHESIS expression T_CLOSE_PARENTHESIS T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":204  */
-                                                                                                                { $yyval = new Statement\ElseIfStatement($yystack->valueAt(4), $yystack->valueAt(1)); };
+  case 73: /* else_if_statement: T_ELIF '(' expression ')' '{' statement_list '}'  */
+    /* "grammar.y":192  */
+                                                                                        { $yyval = new Statement\ElseIfStatement($yystack->valueAt(4), $yystack->valueAt(1)); };
   break;
 
 
   case 74: /* multi_else_if_statement: %empty  */
-    /* "grammar.y":207  */
+    /* "grammar.y":195  */
                                                                                 { $yyval = []; };
   break;
 
 
   case 75: /* multi_else_if_statement: multi_else_if_statement else_if_statement  */
-    /* "grammar.y":208  */
+    /* "grammar.y":196  */
                                                                 { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)]; };
   break;
 
 
-  case 76: /* else_statement: T_ELSE T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":212  */
-                                                                { $yyval = new Statement\ElseStatement($yystack->valueAt(1)); };
+  case 76: /* else_statement: T_ELSE '{' statement_list '}'  */
+    /* "grammar.y":200  */
+                                                                        { $yyval = new Statement\ElseStatement($yystack->valueAt(1)); };
   break;
 
 
   case 77: /* if_statement: base_if_statement  */
-    /* "grammar.y":216  */
+    /* "grammar.y":204  */
                                                                                                                         { $yyval = $yystack->valueAt(0); };
   break;
 
 
   case 78: /* if_statement: base_if_statement multi_else_if_statement else_statement  */
-    /* "grammar.y":217  */
+    /* "grammar.y":205  */
                                                                                 { $yyval = new Statement\IfStatement($yystack->valueAt(2)->condition, $yystack->valueAt(2)->children, $yystack->valueAt(1), $yystack->valueAt(0)); };
   break;
 
 
-  case 79: /* for_init_expression: T_SEMICOLON  */
-    /* "grammar.y":221  */
-                                                { $yyval = null; };
+  case 79: /* for_init_expression: ';'  */
+    /* "grammar.y":209  */
+                                                        { $yyval = null; };
   break;
 
 
   case 80: /* for_init_expression: variable_declaration  */
-    /* "grammar.y":222  */
+    /* "grammar.y":210  */
                                 { $yyval = $yystack->valueAt(0); };
   break;
 
 
-  case 81: /* for_init_expression: expression T_SEMICOLON  */
-    /* "grammar.y":223  */
-                                { $yyval = $yystack->valueAt(1); };
+  case 81: /* for_init_expression: expression ';'  */
+    /* "grammar.y":211  */
+                                        { $yyval = $yystack->valueAt(1); };
   break;
 
 
-  case 82: /* for_condition: T_SEMICOLON  */
-    /* "grammar.y":227  */
-                                                { $yyval = null; };
+  case 82: /* for_condition: ';'  */
+    /* "grammar.y":215  */
+                                        { $yyval = null; };
   break;
 
 
-  case 83: /* for_condition: expression T_SEMICOLON  */
-    /* "grammar.y":228  */
-                                { $yyval = $yystack->valueAt(1); };
+  case 83: /* for_condition: expression ';'  */
+    /* "grammar.y":216  */
+                        { $yyval = $yystack->valueAt(1); };
   break;
 
 
-  case 84: /* for_update_expression: T_SEMICOLON  */
-    /* "grammar.y":232  */
-                                                { $yyval = null; };
+  case 84: /* for_update_expression: ';'  */
+    /* "grammar.y":220  */
+                                                        { $yyval = null; };
   break;
 
 
   case 85: /* for_update_expression: expression  */
-    /* "grammar.y":233  */
+    /* "grammar.y":221  */
                                                 { $yyval = $yystack->valueAt(0); };
   break;
 
 
-  case 86: /* for_statement: T_FOR T_OPEN_PARENTHESIS for_init_expression for_condition for_update_expression T_CLOSE_PARENTHESIS T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":237  */
-                                                                                                                                                                        { $yyval = new Statement\ForStatement($yystack->valueAt(6), $yystack->valueAt(5), $yystack->valueAt(4), $yystack->valueAt(1)); };
+  case 86: /* for_statement: T_FOR '(' for_init_expression for_condition for_update_expression ')' '{' statement_list '}'  */
+    /* "grammar.y":225  */
+                                                                                                                { $yyval = new Statement\ForStatement($yystack->valueAt(6), $yystack->valueAt(5), $yystack->valueAt(4), $yystack->valueAt(1)); };
   break;
 
 
-  case 87: /* while_statement: T_WHILE T_OPEN_PARENTHESIS expression T_CLOSE_PARENTHESIS T_OPEN_BRACES statement_list T_CLOSE_BRACES  */
-    /* "grammar.y":241  */
-                                                                                                                                                                                                                { $yyval = new Statement\WhileStatement($yystack->valueAt(4), $yystack->valueAt(1)); };
+  case 87: /* while_statement: T_WHILE '(' expression ')' '{' statement_list '}'  */
+    /* "grammar.y":229  */
+                                                                                                                                                                { $yyval = new Statement\WhileStatement($yystack->valueAt(4), $yystack->valueAt(1)); };
   break;
 
 
-  case 88: /* import: T_IMPORT T_USER_STRING T_SEMICOLON  */
-    /* "grammar.y":245  */
-                                                                { $yyval = new Statement\ImportStatement($yystack->valueAt(2)); };
+  case 88: /* import: T_IMPORT T_USER_STRING ';'  */
+    /* "grammar.y":233  */
+                                                        { $yyval = new Statement\ImportStatement($yystack->valueAt(2)); };
   break;
 
 
   case 89: /* type_body: %empty  */
-    /* "grammar.y":248  */
+    /* "grammar.y":236  */
                                                                 { $yyval = []; };
   break;
 
 
   case 90: /* type_body: type_body variable_declaration  */
-    /* "grammar.y":249  */
+    /* "grammar.y":237  */
                                         { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)]; };
   break;
 
 
   case 91: /* type_body: type_body fun_declaration  */
-    /* "grammar.y":250  */
+    /* "grammar.y":238  */
                                                 { $yyval = [...$yystack->valueAt(1), $yystack->valueAt(0)]; };
   break;
 
 
-  case 92: /* type_declaration: T_TYPE T_STRING T_OPEN_BRACES type_body T_CLOSE_BRACES  */
-    /* "grammar.y":254  */
-                                                                        { $yyval = new Statement\TypeDeclarationStatement($yystack->valueAt(3), $yystack->valueAt(1)); };
+  case 92: /* type_declaration: T_TYPE T_STRING '{' type_body '}'  */
+    /* "grammar.y":242  */
+                                                        { $yyval = new Statement\TypeDeclarationStatement($yystack->valueAt(3), $yystack->valueAt(1)); };
   break;
 
 
-  case 93: /* new_object: T_NEW T_STRING T_OPEN_PARENTHESIS function_call_args T_CLOSE_PARENTHESIS  */
-    /* "grammar.y":258  */
-                                                                                        { $yyval = new Expression\NewObjectExpression($yystack->valueAt(3), $yystack->valueAt(1)); };
+  case 93: /* new_object: T_NEW T_STRING '(' function_call_args ')'  */
+    /* "grammar.y":246  */
+                                                        { $yyval = new Expression\NewObjectExpression($yystack->valueAt(3), $yystack->valueAt(1)); };
   break;
 
 
 
-/* "lib/parser.php":1119  */
+/* "lib/parser.php":1094  */
 
         default: break;
       }
@@ -1389,32 +1364,32 @@ class Parser
     return $yyvalue === $this->yytable_ninf;
   }
 
-  public int $yypact_ninf = -77;
+  public int $yypact_ninf = -56;
   public int $yytable_ninf = -75;
 
 /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
    STATE-NUM.  */
   
   /** @var int[] */
-  public array $yypact = array(   -77,    21,   311,   -77,   -77,   -77,    38,   367,    45,    37,
-      56,   443,   -77,   -77,   443,   -77,    26,   387,    36,    85,
-      97,   103,    73,   108,   -77,   516,   109,   -77,   -77,    80,
-     111,   113,   -77,   -77,   -77,   -77,   -77,   -77,    18,   -77,
-     -77,   -77,   -77,   -77,   -77,    74,   -77,   114,   530,   443,
-     443,   443,    94,   565,   117,   -77,   -77,   577,   131,   443,
-     443,   349,   115,   123,   443,   -77,   461,   479,   497,   443,
-     443,   443,   443,   443,   443,   443,   147,   443,   443,   443,
-     443,   443,   443,    54,   443,   -77,   -77,    89,    89,   558,
-     -77,   -77,    17,   -77,   -77,   612,   624,   -77,   659,   -77,
-     405,   -77,   443,   -13,   -77,    89,   -77,    89,   -77,   558,
-     558,    94,   788,   -13,   -13,   -13,   -13,   -77,   768,   -12,
-     768,    58,   768,    91,    93,   132,   125,   -77,   -77,   671,
-      34,    15,   133,   -77,   134,   135,   -77,   -77,   706,   425,
-       3,    99,   -77,   443,   -77,   -77,   -77,   443,   -77,   -77,
-     142,   443,   -77,   -77,   -77,   -77,   -77,   -77,   768,   141,
-     -77,   154,   -77,   -77,   -77,   768,   718,     5,   -77,   753,
-      79,   136,   171,   143,   145,   -77,   206,   -77,   -77,   -77,
-     -77,   -77,   -77,   -77,   241,   276,   -77,   -77);
+  public array $yypact = array(   -56,    10,   329,   -56,   -56,   -56,    36,   376,   592,   -56,
+     -56,   -56,    29,   414,    27,    16,    28,    44,    43,    91,
+      66,    78,    81,   592,   -56,   668,    82,   -56,   -56,   -12,
+       5,    83,   -56,   -56,   -56,   -56,   -56,   -56,    59,   -56,
+     -56,   -56,   -56,   -56,   -56,     4,    84,   -56,   704,    63,
+      86,   -56,   -56,   724,    79,   592,   592,   363,    87,    88,
+     592,   592,   592,   430,   592,   592,   592,   592,   592,   592,
+     592,   605,   639,   652,   592,   124,   -56,   592,   592,   592,
+     592,   592,   592,    61,   592,   -56,   -56,   -56,     1,   -56,
+     -56,   465,   485,   -56,   744,   -56,   522,   -56,   592,   839,
+     839,   358,   -56,    13,    63,   824,    13,    13,    13,    13,
+     -56,   839,   -56,   839,   -56,   358,   358,   -56,   804,   -15,
+     804,    45,   804,    65,    68,    93,    92,   -56,   -56,   764,
+       6,    -9,    95,   -56,   100,   106,   -56,   -56,   784,   535,
+       8,    70,   -56,   592,   -56,   -56,   -56,   592,   -56,   -56,
+     107,   592,   -56,   -56,   -56,   -56,   -56,   -56,   804,    90,
+     131,   -56,   -56,   -56,   -56,   804,   555,     0,   -56,   293,
+      85,   134,   168,   112,   113,   -56,   202,   -56,   -56,   -56,
+     -56,   -56,   -56,   -56,   236,   270,   -56,   -56);
   
 
 /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -1422,23 +1397,23 @@ class Parser
    means the default is an error.  */
   
   /** @var int[] */
-  public array $yydefact = array(    13,     0,     2,     1,    47,    15,     0,     0,     0,     0,
-       0,     0,    17,    18,     0,    16,     0,     0,     0,     0,
+  public array $yydefact = array(    13,     0,     2,     1,    47,    15,     0,     0,     0,    17,
+      18,    16,     0,     0,     0,     0,     0,     0,     0,     0,
        0,     0,     0,     0,    14,     0,    27,    19,    20,    21,
       22,    24,     3,    26,     4,     6,    23,     7,    77,     8,
-       9,    10,    11,    12,    25,     0,    60,     0,     0,     0,
-       0,     0,    46,     0,     0,    66,    70,     0,     0,     0,
-       0,     0,     0,     0,     0,     5,     0,     0,     0,     0,
-       0,     0,     0,     0,     0,     0,     0,    49,     0,    49,
-       0,    49,    49,     0,     0,    56,    61,    34,    36,    38,
-      28,    66,     0,    71,    88,     0,     0,    79,     0,    80,
-       0,    89,    49,    43,    33,    29,    35,    30,    37,    31,
-      32,    44,    45,    39,    41,    40,    42,    48,    50,     0,
+       9,    10,    11,    12,    25,     0,     0,    60,     0,    46,
+       0,    66,    70,     0,     0,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     5,    49,     0,    49,
+       0,    49,    49,     0,     0,    56,    61,    66,     0,    71,
+      88,     0,     0,    79,     0,    80,     0,    89,    49,    34,
+      36,    38,    28,    43,    44,    45,    39,    41,    40,    42,
+      33,    29,    35,    30,    37,    31,    32,    48,    50,     0,
       58,     0,    59,     0,     0,     0,     0,    75,    78,     0,
        0,    62,     0,    67,     0,     0,    81,    82,     0,     0,
        0,     0,    54,     0,    52,    53,    55,     0,    13,    57,
        0,     0,    63,    13,    13,    13,    83,    84,    85,     0,
-      92,     0,    90,    91,    93,    51,     0,     0,    13,    64,
+       0,    92,    90,    91,    93,    51,     0,     0,    13,    64,
        0,     0,     0,     0,     0,    76,     0,    65,    69,    72,
       87,    13,    13,    68,     0,     0,    86,    73);
   
@@ -1446,18 +1421,18 @@ class Parser
 /* YYPGOTO[NTERM-NUM].  */
   
   /** @var int[] */
-  public array $yypgoto = array(   -77,   -77,   -77,   660,    -7,   -77,   -77,   -77,    96,   -77,
-     -76,   -77,   -60,   -77,   -77,   -77,    82,    35,   -77,   -77,
-     -77,   -77,   -77,   -77,   -77,   -77,   -77,   -77,   -77,   -77,
-     -77,   -77,   -77,   -77);
+  public array $yypgoto = array(   -56,   -56,   -56,   361,    -7,   -56,   -56,   -56,    97,   -56,
+      -3,   -56,   -55,   -56,   -56,   -56,    71,    19,   -56,   -56,
+     -56,   -56,   -56,   -56,   -56,   -56,   -56,   -56,   -56,   -56,
+     -56,   -56,   -56,   -56);
   
 
 /* YYDEFGOTO[NTERM-NUM].  */
   
   /** @var int[] */
   public array $yydefgoto = array(     0,     1,    24,     2,    25,    26,    27,    28,    29,    30,
-     119,    31,    32,    33,    34,   133,    92,    35,    36,    37,
-      38,   127,    83,   128,    39,   100,   139,   159,    40,    41,
+     119,    31,    32,    33,    34,   133,    88,    35,    36,    37,
+      38,   127,    83,   128,    39,    96,   139,   159,    40,    41,
       42,   140,    43,    44);
   
 
@@ -1466,205 +1441,211 @@ class Parser
    number is the opposite.  If YYTABLE_NINF, syntax error.  */
   
   /** @var int[] */
-  public array $yytable = array(    48,    99,    70,   121,    52,   123,   124,    53,     4,   142,
-      57,     5,     6,   143,     6,     7,     8,     9,    10,   151,
-     131,     3,    11,    12,    13,    14,   141,    15,    76,    54,
-     160,   161,   175,    16,    17,    18,    19,   131,   132,    20,
-     152,    45,    87,    88,    89,    21,    55,    22,    23,    50,
-     -74,   -74,    95,    96,    98,   150,    49,   103,    58,   105,
-     107,   109,   110,   111,   112,   113,   114,   115,   116,    51,
-     118,   120,   118,   122,   118,   118,    62,   129,    84,   144,
-     162,    85,     4,   143,    78,     5,   125,   126,     6,     7,
-       8,     9,    10,   138,    64,   118,    11,    12,    13,    14,
-      79,    15,    68,    69,    70,    59,   178,    16,    17,    18,
-      19,    63,   145,    20,   146,    80,   143,    60,   143,    21,
-     164,    22,    23,    61,   143,    72,    73,    74,    75,    77,
-      76,    81,   158,    82,    55,    76,   165,    91,    94,     4,
-     166,   101,     5,   102,   169,     6,     7,     8,     9,    10,
-       4,   148,   147,    11,    12,    13,    14,    54,    15,   153,
-     154,   155,   173,   179,    16,    17,    18,    19,   168,   181,
-      20,   182,   117,   130,     4,   163,    21,     5,    22,    23,
-       6,     7,     8,     9,    10,     0,     0,     0,    11,    12,
-      13,    14,     0,    15,     0,     0,     0,     0,   180,    16,
-      17,    18,    19,     0,     0,    20,     0,     0,     0,     4,
-       0,    21,     5,    22,    23,     6,     7,     8,     9,    10,
-       0,     0,     0,    11,    12,    13,    14,     0,    15,     0,
-       0,     0,     0,   183,    16,    17,    18,    19,     0,     0,
-      20,     0,     0,     0,     4,     0,    21,     5,    22,    23,
-       6,     7,     8,     9,    10,     0,     0,     0,    11,    12,
-      13,    14,     0,    15,     0,     0,     0,     0,   186,    16,
-      17,    18,    19,     0,     0,    20,     0,     0,     0,     4,
-       0,    21,     5,    22,    23,     6,     7,     8,     9,    10,
-       0,     0,     0,    11,    12,    13,    14,     0,    15,     0,
-       0,     0,     0,   187,    16,    17,    18,    19,     0,     0,
-      20,     0,     0,     0,     4,     0,    21,     5,    22,    23,
-       6,     7,     8,     9,    10,     0,     0,     0,    11,    12,
-      13,    14,     0,    15,     0,     0,     0,     0,     0,    16,
-      17,    18,    19,     0,     0,    20,     0,     0,     0,     0,
-       0,    21,     4,    22,    23,     5,    97,     0,     6,     0,
-       8,     9,    10,     0,     0,     0,    11,    12,    13,    14,
-       4,    15,     0,     5,    46,     0,     0,    47,     8,     9,
-      10,     0,     0,     0,    11,    12,    13,    14,     0,    15,
-       4,     0,    23,     5,    56,    47,     0,     0,     8,     9,
-      10,     0,     0,     0,    11,    12,    13,    14,     4,    15,
-      23,     5,   137,     0,     0,    47,     8,     9,    10,     0,
-       0,     0,    11,    12,    13,    14,     0,    15,     4,     0,
-      23,     5,   157,    47,     0,     0,     8,     9,    10,     0,
-       0,     0,    11,    12,    13,    14,     4,    15,    23,     5,
-       0,     0,     0,    47,     8,     9,    10,     0,     0,     0,
-      11,    12,    13,    14,     4,    15,     0,     5,    23,     0,
-       0,    47,   104,     9,    10,     0,     0,     0,    11,    12,
-      13,    14,     4,    15,     0,     5,    23,     0,     0,    47,
-       8,   106,    10,     0,     0,     0,    11,    12,    13,    14,
-       4,    15,     0,     5,    23,     0,     0,    47,     8,     9,
-     108,     0,     0,     0,    11,    12,    13,    14,     0,    15,
-       0,    64,    23,    65,     0,    47,     0,    66,    67,    68,
-      69,    70,    71,     0,     0,    64,     0,    86,     0,     0,
-      23,    66,    67,    68,    69,    70,    71,     0,     0,     0,
-       0,     0,    72,    73,    74,    75,     0,    76,     0,     0,
-       0,     0,     0,    64,     0,     0,    72,    73,    74,    75,
-      64,    76,     0,    70,     0,     0,    66,    67,    68,    69,
-      70,    71,    64,     0,    93,     0,    90,     0,    66,    67,
-      68,    69,    70,    71,    72,    73,    74,    75,     0,    76,
-       0,    72,    73,    74,    75,     0,    76,     0,     0,     0,
-       0,     0,     0,    72,    73,    74,    75,    64,    76,     0,
-       0,     0,     0,    66,    67,    68,    69,    70,    71,    64,
-       0,     0,     0,   134,     0,    66,    67,    68,    69,    70,
-      71,     0,     0,     0,     0,   135,     0,     0,    72,    73,
-      74,    75,     0,    76,     0,     0,     0,     0,     0,     0,
-      72,    73,    74,    75,    64,    76,   136,     0,     0,     0,
-      66,    67,    68,    69,    70,    71,    64,     0,   149,     0,
-       0,     0,    66,    67,    68,    69,    70,    71,     0,     0,
-       0,     0,     0,     0,     0,    72,    73,    74,    75,     0,
-      76,     0,     0,     0,     0,     0,     0,    72,    73,    74,
-      75,    64,    76,   156,     0,     0,     0,    66,    67,    68,
-      69,    70,    71,    64,     0,     0,     0,     0,     0,    66,
-      67,    68,    69,    70,    71,     0,     0,     0,     0,   174,
-       0,     0,    72,    73,    74,    75,     0,    76,     0,     0,
-       0,     0,     0,     0,    72,    73,    74,    75,    64,    76,
-       0,     0,     0,     0,    66,    67,    68,    69,    70,    71,
-       0,     0,     0,    64,     0,     0,     0,     0,   177,    66,
-      67,    68,    69,    70,    71,     0,     0,     0,     0,    72,
-      73,    74,    75,    64,    76,     0,     0,     0,     0,    66,
-      67,    68,    69,    70,    72,    73,    74,    75,   167,    76,
-       0,     0,     0,   170,   171,   172,     0,     0,     0,     0,
-       0,     0,     0,     0,    72,    73,    74,    75,   176,    76,
-       0,     0,     0,     0,     0,     0,     0,     0,     0,     0,
-       0,   184,   185);
+  public array $yytable = array(    48,    49,    95,     4,   131,     5,    53,     6,     7,   131,
+       3,     8,     9,    10,    11,     6,    63,    12,    13,    14,
+      15,    78,    65,    16,   151,   160,   142,   143,    79,    17,
+      18,    19,    50,   152,    20,    21,    22,    84,    80,    45,
+      23,    54,   132,    85,   175,    81,    58,   150,    91,    92,
+      94,    75,   161,    99,   100,   101,    55,   103,   104,   105,
+     106,   107,   108,   109,   111,   113,   115,   116,    56,    51,
+     118,   120,   118,   122,   118,   118,   121,   129,   123,   124,
+     -74,   -74,   125,   126,    57,   162,   144,   143,     4,   138,
+       5,   118,     6,     7,    59,   141,     8,     9,    10,    11,
+      60,    75,    12,    13,    14,    15,   145,   143,    16,   146,
+     143,   164,   143,    61,    17,    18,    19,    62,    90,    20,
+      21,    22,    77,    82,    51,    23,    87,     4,    98,   178,
+      97,   173,   158,   147,    50,   148,   165,     4,   153,     5,
+     166,     6,     7,   154,   169,     8,     9,    10,    11,   155,
+     168,    12,    13,    14,    15,   181,   182,    16,   130,   163,
+       0,     0,     0,    17,    18,    19,     0,     0,    20,    21,
+      22,     4,   117,     5,    23,     6,     7,     0,   179,     8,
+       9,    10,    11,     0,     0,    12,    13,    14,    15,     0,
+       0,    16,     0,     0,     0,     0,     0,    17,    18,    19,
+       0,     0,    20,    21,    22,     4,     0,     5,    23,     6,
+       7,     0,   180,     8,     9,    10,    11,     0,     0,    12,
+      13,    14,    15,     0,     0,    16,     0,     0,     0,     0,
+       0,    17,    18,    19,     0,     0,    20,    21,    22,     4,
+       0,     5,    23,     6,     7,     0,   183,     8,     9,    10,
+      11,     0,     0,    12,    13,    14,    15,     0,     0,    16,
+       0,     0,     0,     0,     0,    17,    18,    19,     0,     0,
+      20,    21,    22,     4,     0,     5,    23,     6,     7,     0,
+     186,     8,     9,    10,    11,     0,     0,    12,    13,    14,
+      15,     0,     0,    16,     0,     0,     0,    64,     0,    17,
+      18,    19,    65,    66,    20,    21,    22,     0,     0,     0,
+      23,     0,     0,     0,   187,     0,     0,     0,    67,    68,
+      69,    70,     0,     0,     0,     0,     0,    71,    72,    73,
+      74,    75,     4,     0,     5,   177,     6,     7,     0,     0,
+       8,     9,    10,    11,     0,     0,    12,    13,    14,    15,
+       0,     0,    16,     0,     0,     0,     0,     0,    17,    18,
+      19,     0,    64,    20,    21,    22,     4,    65,     5,    23,
+       6,     0,     0,     0,     8,     9,    10,    11,     0,     4,
+      46,     5,     0,    67,    68,    69,    70,     8,     9,    10,
+      11,     0,     0,    46,    19,     0,    75,    20,    21,    22,
+       0,     0,    93,    23,     0,     0,     0,    19,     0,     0,
+      20,    21,    22,     0,     0,    47,    23,     4,     0,     5,
+       0,     0,     0,     0,     0,     8,     9,    10,    11,     0,
+       0,    46,     0,     0,    64,     0,     0,     0,     0,    65,
+      66,     0,     0,     0,     0,    19,     0,     0,    20,    21,
+      22,     0,     0,    52,    23,    67,    68,    69,    70,     0,
+       0,     0,     0,     0,    71,    72,    73,    74,    75,    64,
+       0,   102,     0,     0,    65,    66,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,     0,    64,
+      67,    68,    69,    70,    65,    66,     0,     0,     0,    71,
+      72,    73,    74,    75,     0,     0,   134,     0,     0,   167,
+      67,    68,    69,    70,   170,   171,   172,     0,     0,    71,
+      72,    73,    74,    75,     0,     4,   135,     5,     0,   176,
+       0,     0,     0,     8,     9,    10,    11,     0,     4,    46,
+       5,     0,   184,   185,     0,     0,     8,     9,    10,    11,
+       0,     0,    46,    19,     0,     0,    20,    21,    22,    64,
+       0,   137,    23,     0,    65,    66,    19,     0,     0,    20,
+      21,    22,     0,     0,   157,    23,     0,     0,     0,     0,
+      67,    68,    69,    70,     0,     0,     0,     0,     0,    71,
+      72,    73,    74,    75,     0,     4,   174,     5,     0,     0,
+       0,     0,     0,     8,     9,    10,    11,     0,     4,    46,
+       5,     0,     0,     0,     0,     0,     8,     9,    10,    11,
+       0,     0,    46,    19,     0,     0,    20,    21,    22,     0,
+       0,     0,    23,     0,     0,     0,    19,     0,     0,   110,
+      21,    22,     4,     0,     5,    23,     0,     0,     0,     0,
+       8,     9,    10,    11,     0,     4,    46,     5,     0,     0,
+       0,     0,     0,     8,     9,    10,    11,     0,     0,    46,
+      19,     0,    64,    20,   112,    22,     0,    65,    66,    23,
+       0,     0,     0,    19,     0,     0,    20,    21,   114,     0,
+       0,     0,    23,    67,    68,    69,    70,     0,     0,     0,
+       0,     0,    71,    72,    73,    74,    75,    76,    64,     0,
+       0,     0,     0,    65,    66,     0,     0,     0,     0,     0,
+       0,     0,     0,     0,     0,     0,     0,     0,    64,    67,
+      68,    69,    70,    65,    66,     0,     0,     0,    71,    72,
+      73,    74,    75,    86,     0,     0,     0,     0,    64,    67,
+      68,    69,    70,    65,    66,     0,     0,     0,    71,    72,
+      73,    74,    75,    89,     0,     0,     0,     0,    64,    67,
+      68,    69,    70,    65,    66,     0,     0,     0,    71,    72,
+      73,    74,    75,   136,     0,     0,     0,     0,    64,    67,
+      68,    69,    70,    65,    66,     0,     0,     0,    71,    72,
+      73,    74,    75,   149,     0,     0,     0,     0,    64,    67,
+      68,    69,    70,    65,    66,     0,     0,     0,    71,    72,
+      73,    74,    75,   156,     0,     0,     0,     0,    64,    67,
+      68,    69,    70,    65,     0,     0,     0,     0,    71,    72,
+      73,    74,    75,    64,     0,     0,     0,     0,    65,    67,
+      68,    69,    70,     0,     0,     0,     0,     0,    71,    72,
+      73,    74,    75,     0,    67,    68,    69,    70,     0,     0,
+       0,     0,     0,     0,     0,    73,    74,    75);
   
 
 
   /** @var int[] */
-  public array $yycheck = array(     7,    61,    15,    79,    11,    81,    82,    14,     3,    21,
-      17,     6,     9,    25,     9,    10,    11,    12,    13,     4,
-       3,     0,    17,    18,    19,    20,   102,    22,    41,     3,
-      27,    28,    27,    28,    29,    30,    31,     3,    21,    34,
-      25,     3,    49,    50,    51,    40,    20,    42,    43,    12,
-      32,    33,    59,    60,    61,    21,    11,    64,    22,    66,
-      67,    68,    69,    70,    71,    72,    73,    74,    75,    13,
-      77,    78,    79,    80,    81,    82,     3,    84,     4,    21,
-     140,     7,     3,    25,     4,     6,    32,    33,     9,    10,
-      11,    12,    13,   100,     5,   102,    17,    18,    19,    20,
-      20,    22,    13,    14,    15,    20,    27,    28,    29,    30,
-      31,     3,    21,    34,    21,     4,    25,    20,    25,    40,
-      21,    42,    43,    20,    25,    36,    37,    38,    39,    20,
-      41,    20,   139,    20,    20,    41,   143,    20,     7,     3,
-     147,    26,     6,    20,   151,     9,    10,    11,    12,    13,
-       3,    26,    20,    17,    18,    19,    20,     3,    22,    26,
-      26,    26,    21,    27,    28,    29,    30,    31,    26,    26,
-      34,    26,    76,    91,     3,   140,    40,     6,    42,    43,
-       9,    10,    11,    12,    13,    -1,    -1,    -1,    17,    18,
-      19,    20,    -1,    22,    -1,    -1,    -1,    -1,    27,    28,
-      29,    30,    31,    -1,    -1,    34,    -1,    -1,    -1,     3,
-      -1,    40,     6,    42,    43,     9,    10,    11,    12,    13,
-      -1,    -1,    -1,    17,    18,    19,    20,    -1,    22,    -1,
-      -1,    -1,    -1,    27,    28,    29,    30,    31,    -1,    -1,
-      34,    -1,    -1,    -1,     3,    -1,    40,     6,    42,    43,
-       9,    10,    11,    12,    13,    -1,    -1,    -1,    17,    18,
-      19,    20,    -1,    22,    -1,    -1,    -1,    -1,    27,    28,
-      29,    30,    31,    -1,    -1,    34,    -1,    -1,    -1,     3,
-      -1,    40,     6,    42,    43,     9,    10,    11,    12,    13,
-      -1,    -1,    -1,    17,    18,    19,    20,    -1,    22,    -1,
-      -1,    -1,    -1,    27,    28,    29,    30,    31,    -1,    -1,
-      34,    -1,    -1,    -1,     3,    -1,    40,     6,    42,    43,
-       9,    10,    11,    12,    13,    -1,    -1,    -1,    17,    18,
-      19,    20,    -1,    22,    -1,    -1,    -1,    -1,    -1,    28,
-      29,    30,    31,    -1,    -1,    34,    -1,    -1,    -1,    -1,
-      -1,    40,     3,    42,    43,     6,     7,    -1,     9,    -1,
-      11,    12,    13,    -1,    -1,    -1,    17,    18,    19,    20,
-       3,    22,    -1,     6,     7,    -1,    -1,    28,    11,    12,
-      13,    -1,    -1,    -1,    17,    18,    19,    20,    -1,    22,
-       3,    -1,    43,     6,     7,    28,    -1,    -1,    11,    12,
-      13,    -1,    -1,    -1,    17,    18,    19,    20,     3,    22,
-      43,     6,     7,    -1,    -1,    28,    11,    12,    13,    -1,
-      -1,    -1,    17,    18,    19,    20,    -1,    22,     3,    -1,
-      43,     6,     7,    28,    -1,    -1,    11,    12,    13,    -1,
-      -1,    -1,    17,    18,    19,    20,     3,    22,    43,     6,
-      -1,    -1,    -1,    28,    11,    12,    13,    -1,    -1,    -1,
-      17,    18,    19,    20,     3,    22,    -1,     6,    43,    -1,
-      -1,    28,    11,    12,    13,    -1,    -1,    -1,    17,    18,
-      19,    20,     3,    22,    -1,     6,    43,    -1,    -1,    28,
-      11,    12,    13,    -1,    -1,    -1,    17,    18,    19,    20,
-       3,    22,    -1,     6,    43,    -1,    -1,    28,    11,    12,
-      13,    -1,    -1,    -1,    17,    18,    19,    20,    -1,    22,
-      -1,     5,    43,     7,    -1,    28,    -1,    11,    12,    13,
-      14,    15,    16,    -1,    -1,     5,    -1,     7,    -1,    -1,
-      43,    11,    12,    13,    14,    15,    16,    -1,    -1,    -1,
-      -1,    -1,    36,    37,    38,    39,    -1,    41,    -1,    -1,
-      -1,    -1,    -1,     5,    -1,    -1,    36,    37,    38,    39,
-       5,    41,    -1,    15,    -1,    -1,    11,    12,    13,    14,
-      15,    16,     5,    -1,     7,    -1,    21,    -1,    11,    12,
-      13,    14,    15,    16,    36,    37,    38,    39,    -1,    41,
-      -1,    36,    37,    38,    39,    -1,    41,    -1,    -1,    -1,
-      -1,    -1,    -1,    36,    37,    38,    39,     5,    41,    -1,
-      -1,    -1,    -1,    11,    12,    13,    14,    15,    16,     5,
-      -1,    -1,    -1,    21,    -1,    11,    12,    13,    14,    15,
-      16,    -1,    -1,    -1,    -1,    21,    -1,    -1,    36,    37,
-      38,    39,    -1,    41,    -1,    -1,    -1,    -1,    -1,    -1,
-      36,    37,    38,    39,     5,    41,     7,    -1,    -1,    -1,
-      11,    12,    13,    14,    15,    16,     5,    -1,     7,    -1,
-      -1,    -1,    11,    12,    13,    14,    15,    16,    -1,    -1,
-      -1,    -1,    -1,    -1,    -1,    36,    37,    38,    39,    -1,
-      41,    -1,    -1,    -1,    -1,    -1,    -1,    36,    37,    38,
-      39,     5,    41,     7,    -1,    -1,    -1,    11,    12,    13,
-      14,    15,    16,     5,    -1,    -1,    -1,    -1,    -1,    11,
-      12,    13,    14,    15,    16,    -1,    -1,    -1,    -1,    21,
-      -1,    -1,    36,    37,    38,    39,    -1,    41,    -1,    -1,
-      -1,    -1,    -1,    -1,    36,    37,    38,    39,     5,    41,
-      -1,    -1,    -1,    -1,    11,    12,    13,    14,    15,    16,
-      -1,    -1,    -1,     5,    -1,    -1,    -1,    -1,    25,    11,
-      12,    13,    14,    15,    16,    -1,    -1,    -1,    -1,    36,
-      37,    38,    39,     5,    41,    -1,    -1,    -1,    -1,    11,
-      12,    13,    14,    15,    36,    37,    38,    39,   148,    41,
-      -1,    -1,    -1,   153,   154,   155,    -1,    -1,    -1,    -1,
-      -1,    -1,    -1,    -1,    36,    37,    38,    39,   168,    41,
-      -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,
-      -1,   181,   182);
+  public array $yycheck = array(     7,     8,    57,     3,     3,     5,    13,     7,     8,     3,
+       0,    11,    12,    13,    14,     7,    23,    17,    18,    19,
+      20,    33,     9,    23,    33,    17,    41,    42,    40,    29,
+      30,    31,     3,    42,    34,    35,    36,    33,    33,     3,
+      40,    14,    41,    39,    44,    40,     3,    41,    55,    56,
+      57,    38,    44,    60,    61,    62,    40,    64,    65,    66,
+      67,    68,    69,    70,    71,    72,    73,    74,    40,    40,
+      77,    78,    79,    80,    81,    82,    79,    84,    81,    82,
+      21,    22,    21,    22,    40,   140,    41,    42,     3,    96,
+       5,    98,     7,     8,     3,    98,    11,    12,    13,    14,
+      34,    38,    17,    18,    19,    20,    41,    42,    23,    41,
+      42,    41,    42,    35,    29,    30,    31,    36,    39,    34,
+      35,    36,    40,    40,    40,    40,    40,     3,    40,    44,
+      43,    41,   139,    40,     3,    43,   143,     3,    43,     5,
+     147,     7,     8,    43,   151,    11,    12,    13,    14,    43,
+      43,    17,    18,    19,    20,    43,    43,    23,    87,   140,
+      -1,    -1,    -1,    29,    30,    31,    -1,    -1,    34,    35,
+      36,     3,    75,     5,    40,     7,     8,    -1,    44,    11,
+      12,    13,    14,    -1,    -1,    17,    18,    19,    20,    -1,
+      -1,    23,    -1,    -1,    -1,    -1,    -1,    29,    30,    31,
+      -1,    -1,    34,    35,    36,     3,    -1,     5,    40,     7,
+       8,    -1,    44,    11,    12,    13,    14,    -1,    -1,    17,
+      18,    19,    20,    -1,    -1,    23,    -1,    -1,    -1,    -1,
+      -1,    29,    30,    31,    -1,    -1,    34,    35,    36,     3,
+      -1,     5,    40,     7,     8,    -1,    44,    11,    12,    13,
+      14,    -1,    -1,    17,    18,    19,    20,    -1,    -1,    23,
+      -1,    -1,    -1,    -1,    -1,    29,    30,    31,    -1,    -1,
+      34,    35,    36,     3,    -1,     5,    40,     7,     8,    -1,
+      44,    11,    12,    13,    14,    -1,    -1,    17,    18,    19,
+      20,    -1,    -1,    23,    -1,    -1,    -1,     4,    -1,    29,
+      30,    31,     9,    10,    34,    35,    36,    -1,    -1,    -1,
+      40,    -1,    -1,    -1,    44,    -1,    -1,    -1,    25,    26,
+      27,    28,    -1,    -1,    -1,    -1,    -1,    34,    35,    36,
+      37,    38,     3,    -1,     5,    42,     7,     8,    -1,    -1,
+      11,    12,    13,    14,    -1,    -1,    17,    18,    19,    20,
+      -1,    -1,    23,    -1,    -1,    -1,    -1,    -1,    29,    30,
+      31,    -1,     4,    34,    35,    36,     3,     9,     5,    40,
+       7,    -1,    -1,    -1,    11,    12,    13,    14,    -1,     3,
+      17,     5,    -1,    25,    26,    27,    28,    11,    12,    13,
+      14,    -1,    -1,    17,    31,    -1,    38,    34,    35,    36,
+      -1,    -1,    39,    40,    -1,    -1,    -1,    31,    -1,    -1,
+      34,    35,    36,    -1,    -1,    39,    40,     3,    -1,     5,
+      -1,    -1,    -1,    -1,    -1,    11,    12,    13,    14,    -1,
+      -1,    17,    -1,    -1,     4,    -1,    -1,    -1,    -1,     9,
+      10,    -1,    -1,    -1,    -1,    31,    -1,    -1,    34,    35,
+      36,    -1,    -1,    39,    40,    25,    26,    27,    28,    -1,
+      -1,    -1,    -1,    -1,    34,    35,    36,    37,    38,     4,
+      -1,    41,    -1,    -1,     9,    10,    -1,    -1,    -1,    -1,
+      -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,     4,
+      25,    26,    27,    28,     9,    10,    -1,    -1,    -1,    34,
+      35,    36,    37,    38,    -1,    -1,    41,    -1,    -1,   148,
+      25,    26,    27,    28,   153,   154,   155,    -1,    -1,    34,
+      35,    36,    37,    38,    -1,     3,    41,     5,    -1,   168,
+      -1,    -1,    -1,    11,    12,    13,    14,    -1,     3,    17,
+       5,    -1,   181,   182,    -1,    -1,    11,    12,    13,    14,
+      -1,    -1,    17,    31,    -1,    -1,    34,    35,    36,     4,
+      -1,    39,    40,    -1,     9,    10,    31,    -1,    -1,    34,
+      35,    36,    -1,    -1,    39,    40,    -1,    -1,    -1,    -1,
+      25,    26,    27,    28,    -1,    -1,    -1,    -1,    -1,    34,
+      35,    36,    37,    38,    -1,     3,    41,     5,    -1,    -1,
+      -1,    -1,    -1,    11,    12,    13,    14,    -1,     3,    17,
+       5,    -1,    -1,    -1,    -1,    -1,    11,    12,    13,    14,
+      -1,    -1,    17,    31,    -1,    -1,    34,    35,    36,    -1,
+      -1,    -1,    40,    -1,    -1,    -1,    31,    -1,    -1,    34,
+      35,    36,     3,    -1,     5,    40,    -1,    -1,    -1,    -1,
+      11,    12,    13,    14,    -1,     3,    17,     5,    -1,    -1,
+      -1,    -1,    -1,    11,    12,    13,    14,    -1,    -1,    17,
+      31,    -1,     4,    34,    35,    36,    -1,     9,    10,    40,
+      -1,    -1,    -1,    31,    -1,    -1,    34,    35,    36,    -1,
+      -1,    -1,    40,    25,    26,    27,    28,    -1,    -1,    -1,
+      -1,    -1,    34,    35,    36,    37,    38,    39,     4,    -1,
+      -1,    -1,    -1,     9,    10,    -1,    -1,    -1,    -1,    -1,
+      -1,    -1,    -1,    -1,    -1,    -1,    -1,    -1,     4,    25,
+      26,    27,    28,     9,    10,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,    39,    -1,    -1,    -1,    -1,     4,    25,
+      26,    27,    28,     9,    10,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,    39,    -1,    -1,    -1,    -1,     4,    25,
+      26,    27,    28,     9,    10,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,    39,    -1,    -1,    -1,    -1,     4,    25,
+      26,    27,    28,     9,    10,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,    39,    -1,    -1,    -1,    -1,     4,    25,
+      26,    27,    28,     9,    10,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,    39,    -1,    -1,    -1,    -1,     4,    25,
+      26,    27,    28,     9,    -1,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,     4,    -1,    -1,    -1,    -1,     9,    25,
+      26,    27,    28,    -1,    -1,    -1,    -1,    -1,    34,    35,
+      36,    37,    38,    -1,    25,    26,    27,    28,    -1,    -1,
+      -1,    -1,    -1,    -1,    -1,    36,    37,    38);
   
 
 /* YYSTOS[STATE-NUM] -- The symbol kind of the accessing symbol of
    state STATE-NUM.  */
   
   /** @var int[] */
-  public array $yystos = array(     0,    46,    48,     0,     3,     6,     9,    10,    11,    12,
-      13,    17,    18,    19,    20,    22,    28,    29,    30,    31,
-      34,    40,    42,    43,    47,    49,    50,    51,    52,    53,
+  public array $yystos = array(     0,    46,    48,     0,     3,     5,     7,     8,    11,    12,
+      13,    14,    17,    18,    19,    20,    23,    29,    30,    31,
+      34,    35,    36,    40,    47,    49,    50,    51,    52,    53,
       54,    56,    57,    58,    59,    62,    63,    64,    65,    69,
-      73,    74,    75,    77,    78,     3,     7,    28,    49,    11,
-      12,    13,    49,    49,     3,    20,     7,    49,    22,    20,
-      20,    20,     3,     3,     5,     7,    11,    12,    13,    14,
-      15,    16,    36,    37,    38,    39,    41,    20,     4,    20,
-       4,    20,    20,    67,     4,     7,     7,    49,    49,    49,
-      21,    20,    61,     7,     7,    49,    49,     7,    49,    57,
-      70,    26,    20,    49,    11,    49,    12,    49,    13,    49,
-      49,    49,    49,    49,    49,    49,    49,    53,    49,    55,
-      49,    55,    49,    55,    55,    32,    33,    66,    68,    49,
-      61,     3,    21,    60,    21,    21,     7,     7,    49,    71,
-      76,    55,    21,    25,    21,    21,    21,    20,    26,     7,
-      21,     4,    25,    26,    26,    26,     7,     7,    49,    72,
-      27,    28,    57,    62,    21,    49,    49,    48,    26,    49,
-      48,    48,    48,    21,    21,    27,    48,    25,    27,    27,
-      27,    26,    26,    27,    48,    48,    27,    27);
+      73,    74,    75,    77,    78,     3,    17,    39,    49,    49,
+       3,    40,    39,    49,    14,    40,    40,    40,     3,     3,
+      34,    35,    36,    49,     4,     9,    10,    25,    26,    27,
+      28,    34,    35,    36,    37,    38,    39,    40,    33,    40,
+      33,    40,    40,    67,    33,    39,    39,    40,    61,    39,
+      39,    49,    49,    39,    49,    57,    70,    43,    40,    49,
+      49,    49,    41,    49,    49,    49,    49,    49,    49,    49,
+      34,    49,    35,    49,    36,    49,    49,    53,    49,    55,
+      49,    55,    49,    55,    55,    21,    22,    66,    68,    49,
+      61,     3,    41,    60,    41,    41,    39,    39,    49,    71,
+      76,    55,    41,    42,    41,    41,    41,    40,    43,    39,
+      41,    33,    42,    43,    43,    43,    39,    39,    49,    72,
+      17,    44,    57,    62,    41,    49,    49,    48,    43,    49,
+      48,    48,    48,    41,    41,    44,    48,    42,    44,    44,
+      44,    43,    43,    44,    48,    48,    44,    44);
   
 
 /* YYR1[RULE-NUM] -- Symbol kind of the left-hand side of rule RULE-NUM.  */
@@ -1705,7 +1686,7 @@ class Parser
   private function yytranslate(int $t): SymbolKind
   {
     // Last valid token kind.
-    $code_max = 299;
+    $code_max = 287;
     if ($t <= 0)
       return new SymbolKind(SymbolKind::S_YYEOF);
     else if ($t <= $code_max)
@@ -1719,15 +1700,15 @@ class Parser
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+      40,    41,    36,    34,    42,    35,    38,    37,     2,     2,
+       2,     2,     2,     2,     2,     2,     2,     2,     2,    39,
+       2,    33,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
-       2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
+       2,     2,     2,    43,     2,    44,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -1743,17 +1724,16 @@ class Parser
        2,     2,     2,     2,     2,     2,     1,     2,     3,     4,
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
-      25,    26,    27,    28,    29,    30,    31,    32,    33,    34,
-      35,    36,    37,    38,    39,    40,    41,    42,    43,    44);
+      25,    26,    27,    28,    29,    30,    31,    32);
   
 
 
-  public const YYLAST = 842;
+  public const YYLAST = 877;
   public const YYEMPTY = -2;
   public const YYFINAL = 3;
   public const YYNTOKENS = 45;
 
 
 }
-/* "grammar.y":260  */
+/* "grammar.y":248  */
 
