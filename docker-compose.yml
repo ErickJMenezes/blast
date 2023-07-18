@@ -1,0 +1,11 @@
+version: '3.18'
+
+services:
+  workspace:
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    container_name: workspace
+    volumes:
+      - ./:/usr/src/blast
+    tty: true
