@@ -1,10 +1,10 @@
 <?php
 
-namespace Blast\Language;
+namespace Blast\Language\Node;
 
 use Mrsuh\Tree\NodeInterface;
 
-abstract class Node implements NodeInterface
+abstract class AbstractNode implements NodeInterface
 {
     public function __construct(
         public readonly string $name,

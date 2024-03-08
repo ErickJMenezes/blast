@@ -9,7 +9,7 @@ class IfStatement extends Statement
 {
     /**
      * @param \Blast\Language\Node\Expression                       $condition
-     * @param array<\Blast\Language\Node>                           $children
+     * @param array<\Blast\Language\Node\AbstractNode>              $children
      * @param array<\Blast\Language\Node\Statement\ElseIfStatement> $elseIfs
      * @param \Blast\Language\Node\Statement\ElseStatement|null     $else
      */

@@ -2,9 +2,7 @@
 
 namespace Blast\Language\Node;
 
-use Blast\Language\Node;
-
-abstract class Statement extends Node
+abstract class Statement extends AbstractNode
 {
 
 }

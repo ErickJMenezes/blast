@@ -40,9 +40,9 @@ namespace Blast\Language;
 /* First part of user prologue.  */
 /* "grammar.y":1  */
 
+use Blast\Language\Node\AbstractNode;
 use Blast\Language\Node\Expression;
 use Blast\Language\Node\Statement;
-use Blast\Language\Node;
 
 /* "lib/parser.php":48  */
 
@@ -397,9 +397,9 @@ class Parser
 /* "%code parser" blocks.  */
 /* "grammar.y":10  */
 
-    private Node $ast;
-    public function setAst(Node $ast): void { $this->ast = $ast; }
-    public function getAst(): Node { return $this->ast; }
+    private AbstractNode $ast;
+    public function setAst(AbstractNode $ast): void { $this->ast = $ast; }
+    public function getAst(): AbstractNode { return $this->ast; }
 
 /* "lib/parser.php":405  */
 
@@ -425,7 +425,7 @@ class Parser
 
     $this->yylexer = $lexer;
     $this->yystack          = new YYStack();
-    
+
 
   }
 
@@ -1113,7 +1113,7 @@ class Parser
    * @return <tt>true</tt> if the parsing succeeds.  Note that this does not
    *          imply that there were no syntax errors.
    */
-  public function parse(): bool 
+  public function parse(): bool
 
   {
 
@@ -1369,7 +1369,7 @@ class Parser
 
 /* YYPACT[STATE-NUM] -- Index in YYTABLE of the portion describing
    STATE-NUM.  */
-  
+
   /** @var int[] */
   public array $yypact = array(   -56,    10,   329,   -56,   -56,   -56,    36,   376,   592,   -56,
      -56,   -56,    29,   414,    27,    16,    28,    44,    43,    91,
@@ -1390,12 +1390,12 @@ class Parser
      131,   -56,   -56,   -56,   -56,   804,   555,     0,   -56,   293,
       85,   134,   168,   112,   113,   -56,   202,   -56,   -56,   -56,
      -56,   -56,   -56,   -56,   236,   270,   -56,   -56);
-  
+
 
 /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
    Performed when YYTABLE does not specify something else to do.  Zero
    means the default is an error.  */
-  
+
   /** @var int[] */
   public array $yydefact = array(    13,     0,     2,     1,    47,    15,     0,     0,     0,    17,
       18,    16,     0,     0,     0,     0,     0,     0,     0,     0,
@@ -1416,30 +1416,30 @@ class Parser
        0,    92,    90,    91,    93,    51,     0,     0,    13,    64,
        0,     0,     0,     0,     0,    76,     0,    65,    69,    72,
       87,    13,    13,    68,     0,     0,    86,    73);
-  
+
 
 /* YYPGOTO[NTERM-NUM].  */
-  
+
   /** @var int[] */
   public array $yypgoto = array(   -56,   -56,   -56,   361,    -7,   -56,   -56,   -56,    97,   -56,
       -3,   -56,   -55,   -56,   -56,   -56,    71,    19,   -56,   -56,
      -56,   -56,   -56,   -56,   -56,   -56,   -56,   -56,   -56,   -56,
      -56,   -56,   -56,   -56);
-  
+
 
 /* YYDEFGOTO[NTERM-NUM].  */
-  
+
   /** @var int[] */
   public array $yydefgoto = array(     0,     1,    24,     2,    25,    26,    27,    28,    29,    30,
      119,    31,    32,    33,    34,   133,    88,    35,    36,    37,
       38,   127,    83,   128,    39,    96,   139,   159,    40,    41,
       42,   140,    43,    44);
-  
+
 
 /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
    positive, shift that token.  If negative, reduce the rule whose
    number is the opposite.  If YYTABLE_NINF, syntax error.  */
-  
+
   /** @var int[] */
   public array $yytable = array(    48,    49,    95,     4,   131,     5,    53,     6,     7,   131,
        3,     8,     9,    10,    11,     6,    63,    12,    13,    14,
@@ -1529,7 +1529,7 @@ class Parser
       68,    69,    70,     0,     0,     0,     0,     0,    71,    72,
       73,    74,    75,     0,    67,    68,    69,    70,     0,     0,
        0,     0,     0,     0,     0,    73,    74,    75);
-  
+
 
 
   /** @var int[] */
@@ -1621,11 +1621,11 @@ class Parser
       26,    27,    28,    -1,    -1,    -1,    -1,    -1,    34,    35,
       36,    37,    38,    -1,    25,    26,    27,    28,    -1,    -1,
       -1,    -1,    -1,    -1,    -1,    36,    37,    38);
-  
+
 
 /* YYSTOS[STATE-NUM] -- The symbol kind of the accessing symbol of
    state STATE-NUM.  */
-  
+
   /** @var int[] */
   public array $yystos = array(     0,    46,    48,     0,     3,     5,     7,     8,    11,    12,
       13,    14,    17,    18,    19,    20,    23,    29,    30,    31,
@@ -1646,10 +1646,10 @@ class Parser
       17,    44,    57,    62,    41,    49,    49,    48,    43,    49,
       48,    48,    48,    41,    41,    44,    48,    42,    44,    44,
       44,    43,    43,    44,    48,    48,    44,    44);
-  
+
 
 /* YYR1[RULE-NUM] -- Symbol kind of the left-hand side of rule RULE-NUM.  */
-  
+
   /** @var int[] */
   public array $yyr1 = array(     0,    45,    46,    47,    47,    47,    47,    47,    47,    47,
       47,    47,    47,    48,    48,    49,    49,    49,    49,    49,
@@ -1661,10 +1661,10 @@ class Parser
       64,    64,    65,    66,    67,    67,    68,    69,    69,    70,
       70,    70,    71,    71,    72,    72,    73,    74,    75,    76,
       76,    76,    77,    78);
-  
+
 
 /* YYR2[RULE-NUM] -- Number of symbols on the right-hand side of rule RULE-NUM.  */
-  
+
   /** @var int[] */
   public array $yyr2 = array(     0,     2,     1,     1,     1,     2,     1,     1,     1,     1,
        1,     1,     1,     0,     2,     1,     1,     1,     1,     1,
@@ -1676,7 +1676,7 @@ class Parser
        2,     3,     7,     7,     0,     2,     4,     1,     3,     1,
        1,     2,     1,     2,     1,     1,     9,     7,     3,     0,
        2,     2,     5,     5);
-  
+
 
 
 
@@ -1694,7 +1694,7 @@ class Parser
     else
       return new SymbolKind(SymbolKind::S_YYUNDEF);
   }
-  
+
   /** @var int[] */
   public array $yytranslate_table = array(     0,     2,     2,     2,     2,     2,     2,     2,     2,     2,
        2,     2,     2,     2,     2,     2,     2,     2,     2,     2,
@@ -1725,7 +1725,7 @@ class Parser
        5,     6,     7,     8,     9,    10,    11,    12,    13,    14,
       15,    16,    17,    18,    19,    20,    21,    22,    23,    24,
       25,    26,    27,    28,    29,    30,    31,    32);
-  
+
 
 
   public const YYLAST = 877;
